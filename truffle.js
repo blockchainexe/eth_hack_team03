@@ -13,6 +13,20 @@
  */
 
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // to customize your Truffle configuration!
+  networks: {
+    testnet: {
+      host: "localhost",
+      port: 8545,
+      network_id: "4",
+      gas: 4400000,
+      from: "0xc6026d51bedf948ffc4b7e84a4d490738d221aef"
+    },
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+      gas: 4400000,
+      gasPrice: 2100000000000
+    }
+  }
 };
